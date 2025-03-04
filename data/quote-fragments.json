@@ -1,0 +1,29 @@
+{
+  "fragments": [
+    {
+      "id": "puzzle",
+      "text": "L'éducation est"
+    },
+    {
+      "id": "quiz",
+      "text": "l'arme la plus puissante"
+    },
+    {
+      "id": "memory",
+      "text": "que vous puissiez utiliser"
+    },
+    {
+      "id": "wordsearch",
+      "text": "pour changer"
+    },
+    {
+      "id": "hangman",
+      "text": "le monde."
+    },
+    {
+      "id": "riddle",
+      "text": "- Nelson Mandela"
+    }
+  ],
+  "completeQuote": "L'éducation est l'arme la plus puissante que vous puissiez utiliser pour changer le monde. - Nelson Mandela"
+}

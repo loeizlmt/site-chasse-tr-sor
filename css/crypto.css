@@ -1,0 +1,628 @@
+/**
+ * Cryptographie & Cybersécurité CSS
+ * Styles pour la page de cryptographie et cybersécurité
+ */
+
+/* Styles généraux */
+.crypto-intro,
+.crypto-interactive,
+.cybersecurity,
+.hacking-history {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Introduction à la cryptographie */
+.crypto-definition {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 2rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.crypto-definition p {
+    margin-bottom: 1rem;
+}
+
+.crypto-definition p:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline de l'histoire de la cryptographie */
+.crypto-history .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.crypto-history .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.crypto-history .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.crypto-history .timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.crypto-history .timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.crypto-history .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.crypto-history .timeline-item:nth-child(odd)::after {
+    right: -17px;
+}
+
+.crypto-history .timeline-item:nth-child(even)::after {
+    left: -17px;
+}
+
+.crypto-history .timeline-date {
+    position: absolute;
+    top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.crypto-history .timeline-item:nth-child(odd) .timeline-date {
+    right: -150px;
+}
+
+.crypto-history .timeline-item:nth-child(even) .timeline-date {
+    left: -150px;
+}
+
+.crypto-history .timeline-content {
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.crypto-history .timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.crypto-history .timeline-content h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.example-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: monospace;
+}
+
+/* Responsive timeline */
+@media screen and (max-width: 767px) {
+    .crypto-history .timeline::after {
+        left: 31px;
+    }
+    
+    .crypto-history .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .crypto-history .timeline-item:nth-child(odd),
+    .crypto-history .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .crypto-history .timeline-item:nth-child(odd)::after,
+    .crypto-history .timeline-item:nth-child(even)::after {
+        left: 15px;
+        right: auto;
+    }
+    
+    .crypto-history .timeline-item:nth-child(odd) .timeline-date,
+    .crypto-history .timeline-item:nth-child(even) .timeline-date {
+        right: auto;
+        left: 15px;
+        top: -30px;
+        font-size: 1rem;
+    }
+}
+
+/* Outils cryptographiques interactifs */
+.crypto-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tool-card h3 {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.tool-content {
+    padding: 1.5rem;
+}
+
+.tool-inputs {
+    margin: 1.5rem 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.tool-result {
+    margin-top: 1.5rem;
+}
+
+.result-box {
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 1rem;
+    min-height: 50px;
+    font-family: monospace;
+    word-break: break-all;
+}
+
+/* Responsive tools */
+@media screen and (max-width: 767px) {
+    .crypto-tools {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cybersécurité */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.principle-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+}
+
+.principle-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.principle-card h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.principle-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Menaces de sécurité */
+.threats-accordion {
+    margin-top: 1.5rem;
+}
+
+.threat-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.threat-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.threat-header h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.threat-header h4 i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.threat-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.threat-content {
+    padding: 1.5rem;
+    display: none;
+}
+
+.threat-item.active .threat-content {
+    display: block;
+}
+
+.threat-item.active .threat-toggle {
+    transform: rotate(45deg);
+}
+
+.threat-example {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.threat-example h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.threat-example ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+/* Bonnes pratiques */
+.practices-list {
+    margin-top: 1.5rem;
+}
+
+.practice-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ced4da;
+}
+
+.practice-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.practice-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.practice-content h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.practice-content p {
+    margin: 0;
+}
+
+/* Histoire du hacking */
+.hacking-definition {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 2rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.hackers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.hacker-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.hacker-card:hover {
+    transform: translateY(-5px);
+}
+
+.white-hat {
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+}
+
+.black-hat {
+    background-color: #f8eaea;
+    border-left: 4px solid #e74c3c;
+}
+
+.grey-hat {
+    background-color: #f0f0f0;
+    border-left: 4px solid #7f8c8d;
+}
+
+.hacker-card h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hacker-card p {
+    margin: 0 0 0.5rem 0;
+}
+
+.famous-hackers {
+    margin-top: 2rem;
+}
+
+.hackers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.famous-hacker {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.famous-hacker:hover {
+    transform: translateY(-5px);
+}
+
+.famous-hacker h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.famous-hacker p {
+    margin: 0;
+}
+
+.hacking-culture {
+    margin-top: 2rem;
+}
+
+.culture-content {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.culture-content ul {
+    padding-left: 1.5rem;
+}
+
+.quote-box {
+    background-color: white;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.quote-box blockquote {
+    margin: 0;
+    font-style: italic;
+}
+
+.quote-box cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Thème hackeur */
+.hacker-theme .crypto-intro,
+.hacker-theme .crypto-interactive,
+.hacker-theme .cybersecurity,
+.hacker-theme .hacking-history {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.hacker-theme .crypto-definition,
+.hacker-theme .hacking-definition {
+    background-color: var(--dark-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.hacker-theme .example-box {
+    background-color: var(--dark-color);
+    border-color: var(--primary-color);
+}
+
+.hacker-theme .crypto-history .timeline::after {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.hacker-theme .crypto-history .timeline-item::after {
+    background-color: var(--dark-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.hacker-theme .crypto-history .timeline-date {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.hacker-theme .crypto-history .timeline-content {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.hacker-theme .tool-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.hacker-theme .tool-card h3 {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.hacker-theme .form-group input,
+.hacker-theme .form-group select {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.hacker-theme .result-box {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.hacker-theme .principle-card,
+.hacker-theme .threat-item,
+.hacker-theme .famous-hacker,
+.hacker-theme .hacker-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.hacker-theme .principle-icon,
+.hacker-theme .practice-icon {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.hacker-theme .threat-header {
+    background-color: var(--dark-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.hacker-theme .threat-example {
+    background-color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+}
+
+.hacker-theme .practice-item {
+    border-bottom-color: var(--primary-color);
+}
+
+.hacker-theme .culture-content {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+}
+
+.hacker-theme .quote-box {
+    background-color: var(--dark-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.principle-card,
+.threat-item,
+.practice-item,
+.hacker-card,
+.famous-hacker,
+.tool-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}

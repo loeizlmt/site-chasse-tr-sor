@@ -1,0 +1,44 @@
+{
+  "clips": [
+    {
+      "id": "clip1",
+      "title": "La Vie En Rose",
+      "artist": "Édith Piaf",
+      "year": "1945",
+      "url": "/clips/clip.mp4",
+      "clues": ["chanteuse française", "années 40", "amour"]
+    },
+    {
+      "id": "clip2",
+      "title": "Ne Me Quitte Pas",
+      "artist": "Jacques Brel",
+      "year": "1959",
+      "url": "https://www.example.com/clips/ne-me-quitte-pas.mp4",
+      "clues": ["chanteur belge", "chanson d'amour", "désespoir"]
+    },
+    {
+      "id": "clip3",
+      "title": "L'Été Indien",
+      "artist": "Joe Dassin",
+      "year": "1975",
+      "url": "https://www.example.com/clips/ete-indien.mp4",
+      "clues": ["nostalgie", "saison", "souvenirs"]
+    },
+    {
+      "id": "clip4",
+      "title": "La Bohème",
+      "artist": "Charles Aznavour",
+      "year": "1965",
+      "url": "https://www.example.com/clips/la-boheme.mp4",
+      "clues": ["artistes", "Paris", "jeunesse"]
+    },
+    {
+      "id": "clip5",
+      "title": "Mistral Gagnant",
+      "artist": "Renaud",
+      "year": "1985",
+      "url": "https://www.example.com/clips/mistral-gagnant.mp4",
+      "clues": ["enfance", "bonbons", "nostalgie"]
+    }
+  ]
+}

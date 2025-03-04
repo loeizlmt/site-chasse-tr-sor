@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédits - Chasse au Trésor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hacker-theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav-overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <script>
+        // Direct inline function to toggle mobile menu
+        function toggleMobileMenu() {
+            console.log('Toggle mobile menu called');
+            var nav = document.querySelector('header nav');
+            var menuToggle = document.getElementById('menu-toggle');
+            
+            // Toggle the is-open class
+            if (nav.classList.contains('is-open')) {
+                nav.classList.remove('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                console.log('Menu closed');
+            } else {
+                nav.classList.add('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                console.log('Menu opened');
+            }
+        }
+        
+        // Add event listeners to close menu when links are clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    var nav = document.querySelector('header nav');
+                    var menuToggle = document.getElementById('menu-toggle');
+                    nav.classList.remove('is-open');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        });
+    </script>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Lycée Jean Prévost" id="logo-img">
+            <h1>Chasse au Trésor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="visite.html">Visites Virtuelles</a></li>
+                <li><a href="mini-jeux.html">Mini-Jeux</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Ressources+</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="crypto.html">Cryptographie</a></li>
+                    </ul>
+                </li>
+                <li><a href="credits.html" class="active">Crédits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Crédits & Remerciements</h2>
+                <p>Cette chasse au trésor éducative a été rendue possible grâce à la contribution de nombreuses personnes et ressources.</p>
+            </div>
+        </section>
+        
+        <section class="jean-prevost">
+            <div class="container">
+                <div class="portrait">
+                    <img src="images/jp.png" alt="Portrait de Jean Prévost" class="portrait-image">
+                </div>
+                <div class="biography">
+                    <h2>Jean Prévost (1901-1944)</h2>
+                    <p>Jean Prévost était un écrivain, journaliste et résistant français. Né le 13 juin 1901 à Saint-Pierre-lès-Nemours, il fut un intellectuel engagé et un homme de lettres accompli.</p>
+                    <p>Normalien, agrégé de lettres, il a écrit de nombreux essais, romans et articles. Pendant la Seconde Guerre mondiale, il s'engagea dans la Résistance sous le pseudonyme de "Capitaine Goderville".</p>
+                    <p>Il mourut au combat le 1er août 1944 lors d'une embuscade dans le Vercors. Notre lycée porte fièrement son nom en hommage à son courage, son intelligence et son engagement pour la liberté.</p>
+                    <blockquote>
+                        "La culture, c'est ce qui reste quand on a tout oublié."
+                        <cite>— Attribué à Jean Prévost</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="credits">
+            <h2>Équipe du Projet</h2>
+            
+            <div class="credits-container">
+                <div class="credit-card">
+                    <div class="credit-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Équipe Pédagogique</h3>
+                    <ul>
+                        <li>Département de Français</li>
+                        <li>Département d'Histoire-Géographie</li>
+                        <li>Département d'Informatique</li>
+                        <li>Département de Musique</li>
+                    </ul>
+                </div>
+                
+                <div class="credit-card">
+                    <div class="credit-icon"><i class="fas fa-code"></i></div>
+                    <h3>Développement Web</h3>
+                    <ul>
+                        <li>Conception et développement du site</li>
+                        <li>Intégration des visites virtuelles</li>
+                        <li>Création des mini-jeux interactifs</li>
+                    </ul>
+                </div>
+                
+                <div class="credit-card">
+                    <div class="credit-icon"><i class="fas fa-camera"></i></div>
+                    <h3>Visites Virtuelles</h3>
+                    <ul>
+                        <li>Photographie et numérisation des espaces</li>
+                        <li>Montage et création des visites 360°</li>
+                        <li>Intégration des points d'intérêt</li>
+                    </ul>
+                </div>
+                
+                <div class="credit-card">
+                    <div class="credit-icon"><i class="fas fa-music"></i></div>
+                    <h3>Ressources Musicales</h3>
+                    <ul>
+                        <li>Sélection des extraits musicaux</li>
+                        <li>Analyse et création des indices</li>
+                        <li>Droits d'utilisation pédagogique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h2>Technologies Utilisées</h2>
+            
+            <div class="tech-container">
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                    <h3>HTML5</h3>
+                    <p>Structure et contenu du site</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3>CSS3</h3>
+                    <p>Style et mise en page responsive</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <p>Interactivité et fonctionnalités dynamiques</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fas fa-database"></i></div>
+                    <h3>localStorage</h3>
+                    <p>Stockage local de la progression</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="acknowledgments">
+            <h2>Remerciements</h2>
+            
+            <div class="acknowledgments-content">
+                <p>Nous tenons à remercier chaleureusement :</p>
+                
+                <ul>
+                    <li>La direction du Lycée Jean Prévost pour son soutien et sa confiance dans ce projet innovant.</li>
+                    <li>Les élèves qui ont participé aux tests et fourni des retours précieux pour améliorer l'expérience.</li>
+                    <li>Le personnel technique et administratif pour leur aide logistique.</li>
+                    <li>Les parents d'élèves pour leur encouragement et leur participation.</li>
+                </ul>
+                
+                <p>Un remerciement spécial à tous ceux qui ont contribué de près ou de loin à la réalisation de cette chasse au trésor éducative.</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            
+            <div class="contact-content">
+                <p>Pour toute question ou suggestion concernant cette chasse au trésor, veuillez contacter :</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>chasseautresor@lycee-jeanprevost.fr</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>02 XX XX XX XX</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Lycée Jean Prévost, Montivilliers, France</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lycée Jean Prévost - Montivilliers, France</p>
+        <p>Projet éducatif de chasse au trésor</p>
+    </footer>
+
+    <!-- Mobile Navigation Overlay -->
+    <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="mobile-nav-overlay">
+        <button class="mobile-menu-close" aria-label="Fermer le menu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Accueil</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="visite.html" class="mobile-nav-link">Visites Virtuelles</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="mini-jeux.html" class="mobile-nav-link">Mini-Jeux</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="solution.html" class="mobile-nav-link">Solution</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-submenu">
+                    Ressources
+                    <button class="mobile-submenu-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </a>
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-item">
+                        <a href="ressources.html" class="mobile-submenu-link">Ressources</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="archives.html" class="mobile-submenu-link">Archives</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="crypto.html" class="mobile-submenu-link">Cryptographie</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="credits.html" class="mobile-nav-link active">Crédits</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logo-placeholder.js"></script>
+    <script src="js/hero-placeholder.js"></script>
+    <script src="js/jp-portrait-placeholder.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav-overlay.js"></script>
+    <script src="js/visual-feedback.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/hacker-theme.js"></script>
+    <script src="js/secret-phrases.js"></script>
+    <script src="js/hacker-effects.js"></script>
+    <script src="js/binary-game.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script type="module" src="js/user-profile-main.js"></script>
+    <script>
+        // Add specific styles for the credits page
+        document.addEventListener('DOMContentLoaded', () => {
+            const style = document.createElement('style');
+            style.textContent = `
+                .credits-container, .tech-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2rem;
+                    margin-bottom: 2rem;
+                }
+                
+                .credit-card, .tech-card {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 2rem;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    transition: transform 0.3s;
+                }
+                
+                .credit-card:hover, .tech-card:hover {
+                    transform: translateY(-10px);
+                }
+                
+                .credit-icon, .tech-icon {
+                    font-size: 3rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1.5rem;
+                }
+                
+                .tech-icon {
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .credit-card h3, .tech-card h3 {
+                    margin-bottom: 1rem;
+                }
+                
+                .credit-card ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+                }
+                
+                .credit-card li {
+                    margin-bottom: 0.5rem;
+                    padding-left: 1.5rem;
+                    position: relative;
+                }
+                
+                .credit-card li::before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: var(--primary-color);
+                }
+                
+                .acknowledgments-content, .contact-content {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 2rem;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                }
+                
+                .acknowledgments-content ul {
+                    margin: 1.5rem 0;
+                    padding-left: 1.5rem;
+                }
+                
+                .acknowledgments-content li {
+                    margin-bottom: 1rem;
+                }
+                
+                .contact-info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.5rem;
+                    margin-top: 1.5rem;
+                }
+                
+                .contact-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    background-color: #f8f9fa;
+                    padding: 1rem 1.5rem;
+                    border-radius: 5px;
+                    flex: 1;
+                    min-width: 250px;
+                }
+                
+                .contact-item i {
+                    font-size: 1.5rem;
+                    color: var(--primary-color);
+                }
+                
+                .contact-item p {
+                    margin: 0;
+                }
+                
+                @media (max-width: 767px) {
+                    .credits-container, .tech-container {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            `;
+            
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

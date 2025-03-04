@@ -1,0 +1,197 @@
+/* Alternative Themes for Chasse au Trésor
+ * This file contains CSS variables for different visual themes
+ */
+
+/* Default Theme (already defined in style.css, included here for reference) */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --accent-color: #f1c40f;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --success-color: #2ecc71;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Additional variables for themes */
+    --bg-texture: none;
+    --card-bg-color: white;
+    --card-border: none;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --button-border-radius: 50px;
+    --header-bg: white;
+    --footer-bg: var(--dark-color);
+    --hero-overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    --section-border: none;
+    --font-headings: var(--font-main);
+    --animation-speed: 0.3s;
+}
+
+/* Steampunk Theme */
+.theme-steampunk {
+    --primary-color: #b87333; /* Copper */
+    --secondary-color: #8b4513; /* Saddle Brown */
+    --accent-color: #d4af37; /* Gold */
+    --dark-color: #32281e; /* Dark Brown */
+    --light-color: #f5f5dc; /* Beige */
+    --success-color: #556b2f; /* Dark Olive Green */
+    --font-main: 'Georgia', serif;
+    
+    --bg-texture: linear-gradient(rgba(245, 245, 220, 0.9), rgba(245, 245, 220, 0.9)), repeating-linear-gradient(45deg, rgba(184, 115, 51, 0.1) 0px, rgba(184, 115, 51, 0.1) 10px, transparent 10px, transparent 20px);
+    --card-bg-color: #f5f5dc;
+    --card-border: 2px solid #b87333;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --button-border-radius: 5px;
+    --header-bg: #32281e;
+    --footer-bg: #32281e;
+    --hero-overlay: linear-gradient(rgba(50, 40, 30, 0.7), rgba(50, 40, 30, 0.7));
+    --section-border: 2px solid #b87333;
+    --font-headings: 'Times New Roman', serif;
+    --animation-speed: 0.5s;
+}
+
+/* Medieval Theme */
+.theme-medieval {
+    --primary-color: #8b0000; /* Dark Red */
+    --secondary-color: #4b5320; /* Army Green */
+    --accent-color: #ffd700; /* Gold */
+    --dark-color: #2f4f4f; /* Dark Slate Gray */
+    --light-color: #f5f5dc; /* Beige */
+    --success-color: #006400; /* Dark Green */
+    --font-main: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    
+    --bg-texture: linear-gradient(rgba(245, 245, 220, 0.9), rgba(245, 245, 220, 0.9)), repeating-conic-gradient(from 0deg, rgba(139, 0, 0, 0.1) 0deg 10deg, transparent 10deg 20deg);
+    --card-bg-color: #f5f5dc;
+    --card-border: 3px solid #8b0000;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --button-border-radius: 0;
+    --header-bg: #2f4f4f;
+    --footer-bg: #2f4f4f;
+    --hero-overlay: linear-gradient(rgba(43, 79, 79, 0.7), rgba(43, 79, 79, 0.7));
+    --section-border: 3px solid #8b0000;
+    --font-headings: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --animation-speed: 0.6s;
+}
+
+/* Futuristic Theme */
+.theme-futuristic {
+    --primary-color: #00bfff; /* Deep Sky Blue */
+    --secondary-color: #ff1493; /* Deep Pink */
+    --accent-color: #7cfc00; /* Lawn Green */
+    --dark-color: #191970; /* Midnight Blue */
+    --light-color: #f0f8ff; /* Alice Blue */
+    --success-color: #00fa9a; /* Medium Spring Green */
+    --font-main: 'Arial', sans-serif;
+    
+    --bg-texture: linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)), radial-gradient(circle at 50% 50%, rgba(0, 191, 255, 0.1) 0%, transparent 50%);
+    --card-bg-color: rgba(240, 248, 255, 0.9);
+    --card-border: 1px solid rgba(0, 191, 255, 0.5);
+    --card-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    --button-border-radius: 30px;
+    --header-bg: rgba(25, 25, 112, 0.9);
+    --footer-bg: rgba(25, 25, 112, 0.9);
+    --hero-overlay: linear-gradient(rgba(25, 25, 112, 0.7), rgba(25, 25, 112, 0.7));
+    --section-border: 1px solid rgba(0, 191, 255, 0.5);
+    --font-headings: 'Arial', sans-serif;
+    --animation-speed: 0.2s;
+}
+
+/* Theme-specific styles */
+
+/* Apply background texture */
+body {
+    background-image: var(--bg-texture);
+    background-attachment: fixed;
+}
+
+/* Apply header and footer backgrounds */
+header {
+    background-color: var(--header-bg);
+}
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+/* Apply card styles */
+.rule-card, 
+.game-card, 
+.resource-card, 
+.quote-card,
+.progress-container,
+.form-group,
+.music-player,
+.writing-area {
+    background-color: var(--card-bg-color);
+    border: var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+/* Apply button styles */
+.btn-primary, 
+.btn-secondary {
+    border-radius: var(--button-border-radius);
+    transition: all var(--animation-speed);
+}
+
+/* Apply section borders */
+section {
+    border: var(--section-border);
+}
+
+/* Apply font styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+}
+
+/* Apply hero overlay */
+.hero {
+    background-image: var(--hero-overlay), url('../images/hero-bg.jpg');
+}
+
+/* Steampunk-specific elements */
+.theme-steampunk .btn-primary,
+.theme-steampunk .btn-secondary {
+    border: 2px solid var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.theme-steampunk .rule-icon,
+.theme-steampunk .tech-icon,
+.theme-steampunk .resource-icon {
+    color: var(--accent-color);
+}
+
+/* Medieval-specific elements */
+.theme-medieval .btn-primary,
+.theme-medieval .btn-secondary {
+    border: 2px solid var(--accent-color);
+    text-transform: uppercase;
+    font-family: 'Times New Roman', serif;
+}
+
+.theme-medieval h2::after {
+    background-color: var(--primary-color);
+    height: 5px;
+}
+
+/* Futuristic-specific elements */
+.theme-futuristic .btn-primary,
+.theme-futuristic .btn-secondary {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.theme-futuristic .rule-icon,
+.theme-futuristic .tech-icon,
+.theme-futuristic .resource-icon {
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.theme-futuristic input,
+.theme-futuristic textarea,
+.theme-futuristic select {
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+}

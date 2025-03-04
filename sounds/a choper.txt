@@ -1,0 +1,1 @@
+sounds/glitch.mp3 sounds/click.mp3 sounds/type.mp3 sounds/decode.mp3 sounds/terminal.mp3 sounds/success.mp3 sounds/error.mp3 sounds/ambient.mp3

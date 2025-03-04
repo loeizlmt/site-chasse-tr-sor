@@ -1,0 +1,40 @@
+{
+  "visits": [
+    {
+      "id": "entrance",
+      "name": "Entrée du Lycée",
+      "url": "https://estebe2000.github.io/a",
+      "description": "Découvrez l'entrée principale du lycée Jean Prévost."
+    },
+    {
+      "id": "library",
+      "name": "CDI",
+      "url": "https://www.example.com/visite-virtuelle/cdi",
+      "description": "Explorez le Centre de Documentation et d'Information."
+    },
+    {
+      "id": "science",
+      "name": "Laboratoires de Sciences",
+      "url": "https://www.example.com/visite-virtuelle/sciences",
+      "description": "Visitez les laboratoires de physique, chimie et SVT."
+    },
+    {
+      "id": "sports",
+      "name": "Installations Sportives",
+      "url": "https://www.example.com/visite-virtuelle/sport",
+      "description": "Découvrez le gymnase et les terrains de sport."
+    },
+    {
+      "id": "cafeteria",
+      "name": "Cantine et Foyer",
+      "url": "https://www.example.com/visite-virtuelle/foyer",
+      "description": "Explorez les espaces de restauration et de détente."
+    },
+    {
+      "id": "arts",
+      "name": "Salles d'Arts",
+      "url": "https://www.example.com/visite-virtuelle/arts",
+      "description": "Visitez les salles dédiées aux arts plastiques et à la musique."
+    }
+  ]
+}

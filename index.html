@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chasse au Trésor - Lycée Jean Prévost</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hacker-theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav-overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <script>
+        // Direct inline function to toggle mobile menu
+        function toggleMobileMenu() {
+            console.log('Toggle mobile menu called');
+            var nav = document.querySelector('header nav');
+            var menuToggle = document.getElementById('menu-toggle');
+            
+            // Toggle the is-open class
+            if (nav.classList.contains('is-open')) {
+                nav.classList.remove('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                console.log('Menu closed');
+            } else {
+                nav.classList.add('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                console.log('Menu opened');
+            }
+        }
+        
+        // Add event listeners to close menu when links are clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    var nav = document.querySelector('header nav');
+                    var menuToggle = document.getElementById('menu-toggle');
+                    nav.classList.remove('is-open');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        });
+    </script>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Lycée Jean Prévost" id="logo-img">
+            <h1>Chasse au Trésor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="visite.html">Visites Virtuelles</a></li>
+                <li><a href="mini-jeux.html">Mini-Jeux</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Ressources+</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="crypto.html">Cryptographie</a></li>
+                    </ul>
+                </li>
+                <li><a href="credits.html">Crédits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bienvenue dans la Chasse au Trésor du Lycée Jean Prévost!</h2>
+                <p>Partez à l'aventure, résolvez des énigmes et découvrez les secrets cachés de notre établissement.</p>
+                <a href="visite.html" class="btn-primary">Commencer l'aventure</a>
+            </div>
+        </section>
+        
+        <section class="school-presentation">
+            <div class="container">
+                <div class="school-image">
+                    <img src="images/photojp.jpg" alt="Vue extérieure du Lycée Jean Prévost" class="rounded-image">
+                </div>
+                <div class="school-description">
+                    <h2>Le Lycée Jean Prévost</h2>
+                    <p>Situé à Montivilliers en Normandie, le Lycée Jean Prévost est un établissement d'enseignement secondaire qui porte le nom de l'écrivain et résistant français Jean Prévost.</p>
+                    <p>Notre établissement s'engage à offrir un environnement d'apprentissage stimulant et enrichissant, où les élèves peuvent développer leurs compétences académiques et personnelles.</p>
+                    <p>Cette chasse au trésor vous permettra de découvrir notre lycée sous un angle ludique et interactif, tout en vous familiarisant avec son histoire et ses valeurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules">
+            <h2>Règles du jeu</h2>
+            <div class="rules-container">
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>1. Explorez</h3>
+                    <p>Parcourez les visites virtuelles du lycée pour découvrir des indices et des QR codes cachés.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-qrcode"></i></div>
+                    <h3>2. Scannez</h3>
+                    <p>Scannez les QR codes pour accéder à des mini-jeux. Chaque mini-jeu réussi vous donnera une partie de la citation mystère.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>3. Jouez</h3>
+                    <p>Complétez les 6 mini-jeux pour obtenir tous les fragments de la citation.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-quote-right"></i></div>
+                    <h3>4. Assemblez</h3>
+                    <p>Reconstituez la citation complète et soumettez-la pour accéder à l'épreuve finale.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress">
+            <h2>Votre progression</h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-stats">
+                    <p>Mini-jeux complétés: <span id="completed-games">0</span>/6</p>
+                    <p>Citation: <span id="quote-progress">0</span>%</p>
+                </div>
+                <button id="reset-progress" class="btn-secondary">Réinitialiser la progression</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lycée Jean Prévost - Montivilliers, France</p>
+        <p>Projet éducatif de chasse au trésor</p>
+    </footer>
+
+    <!-- Mobile Navigation Overlay -->
+    <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="mobile-nav-overlay">
+        <button class="mobile-menu-close" aria-label="Fermer le menu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link active">Accueil</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="visite.html" class="mobile-nav-link">Visites Virtuelles</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="mini-jeux.html" class="mobile-nav-link">Mini-Jeux</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="solution.html" class="mobile-nav-link">Solution</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-submenu">
+                    Ressources
+                    <button class="mobile-submenu-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </a>
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-item">
+                        <a href="ressources.html" class="mobile-submenu-link">Ressources</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="archives.html" class="mobile-submenu-link">Archives</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="crypto.html" class="mobile-submenu-link">Cryptographie</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="credits.html" class="mobile-nav-link">Crédits</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logo-placeholder.js"></script>
+    <script src="js/hero-placeholder.js"></script>
+    <script src="js/photojp-placeholder.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav-overlay.js"></script>
+    <script src="js/visual-feedback.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/hacker-theme.js"></script>
+    <script src="js/secret-phrases.js"></script>
+    <script src="js/hacker-effects.js"></script>
+    <script src="js/binary-game.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script type="module" src="js/user-profile-main.js"></script>
+</body>
+</html>

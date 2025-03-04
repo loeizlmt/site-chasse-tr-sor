@@ -1,0 +1,119 @@
+/* Mobile Menu Styles - Simplified Version */
+
+/* Menu Toggle Button */
+#menu-toggle {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Navigation */
+@media (max-width: 767px) {
+    /* Always show the menu toggle button */
+    #menu-toggle {
+        display: flex !important;
+    }
+    
+    /* Hide the regular navigation by default */
+    header nav {
+        display: none !important;
+    }
+    
+    /* Show navigation when it has the is-open class */
+    header nav.is-open {
+        display: block !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background-color: #fff !important;
+        z-index: 9998 !important;
+        padding: 70px 20px 20px !important;
+        overflow-y: auto !important;
+    }
+    
+    /* Style the navigation list */
+    header nav.is-open ul {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    /* Style the navigation items */
+    header nav.is-open li {
+        width: 100% !important;
+    }
+    
+    /* Style the navigation links */
+    header nav.is-open a {
+        display: block !important;
+        padding: 15px !important;
+        font-size: 18px !important;
+        text-align: center !important;
+        background-color: #f8f9fa !important;
+        border-radius: 5px !important;
+    }
+    
+    /* Style active links */
+    header nav.is-open a.active {
+        background-color: #007bff !important;
+        color: white !important;
+    }
+    
+    /* Dropdown adjustments for mobile */
+    header nav.is-open .dropdown-menu {
+        position: static !important;
+        display: block !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    header nav.is-open .dropdown-menu a {
+        padding-left: 30px !important;
+        background-color: #e9ecef !important;
+    }
+}
+
+/* Hacker Theme Adjustments */
+.hacker-theme #menu-toggle {
+    background-color: #000 !important;
+    color: #0f0 !important;
+    border: 1px solid #0f0 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5) !important;
+}
+
+.hacker-theme header nav.is-open {
+    background-color: #000 !important;
+    color: #0f0 !important;
+}
+
+.hacker-theme header nav.is-open a {
+    background-color: #111 !important;
+    color: #0f0 !important;
+    border: 1px solid #0f0 !important;
+}
+
+.hacker-theme header nav.is-open a.active {
+    background-color: #0f0 !important;
+    color: #000 !important;
+}
+
+.hacker-theme header nav.is-open .dropdown-menu a {
+    background-color: #222 !important;
+}

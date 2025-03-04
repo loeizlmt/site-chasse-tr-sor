@@ -1,0 +1,46 @@
+{
+  "games": [
+    {
+      "id": "puzzle",
+      "name": "Puzzle Historique",
+      "description": "Reconstituez une image historique du lycée Jean Prévost.",
+      "image": "images/games/puzzle.jpg",
+      "quoteFragmentIndex": 0
+    },
+    {
+      "id": "quiz",
+      "name": "Quiz de Connaissances",
+      "description": "Testez vos connaissances sur l'histoire et la géographie de Montivilliers.",
+      "image": "images/games/quiz.jpg",
+      "quoteFragmentIndex": 1
+    },
+    {
+      "id": "memory",
+      "name": "Memory des Symboles",
+      "description": "Retrouvez les paires de symboles liés à l'éducation et au lycée.",
+      "image": "images/games/memory.jpg",
+      "quoteFragmentIndex": 2
+    },
+    {
+      "id": "wordsearch",
+      "name": "Mots Mêlés",
+      "description": "Trouvez les mots cachés en rapport avec le lycée et l'éducation.",
+      "image": "images/games/wordsearch.jpg",
+      "quoteFragmentIndex": 3
+    },
+    {
+      "id": "hangman",
+      "name": "Le Pendu",
+      "description": "Devinez le mot mystère lié à l'histoire du lycée.",
+      "image": "images/games/hangman.jpg",
+      "quoteFragmentIndex": 4
+    },
+    {
+      "id": "riddle",
+      "name": "Énigmes Logiques",
+      "description": "Résolvez des énigmes logiques pour obtenir le dernier fragment de la citation.",
+      "image": "images/games/riddle.jpg",
+      "quoteFragmentIndex": 5
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptographie & Cybersécurité - Lycée Jean Prévost</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hacker-theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/crypto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Lycée Jean Prévost" id="logo-img">
+            <h1>Chasse au Trésor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="visite.html">Visites Virtuelles</a></li>
+                <li><a href="mini-jeux.html">Mini-Jeux</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Ressources+</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="crypto.html" class="active">Cryptographie</a></li>
+                    </ul>
+                </li>
+                <li><a href="credits.html">Crédits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Cryptographie & Cybersécurité</h2>
+                <p>Découvrez les bases de la cryptographie et de la cybersécurité à travers des exemples interactifs et des explications simples.</p>
+            </div>
+        </section>
+
+        <section class="crypto-intro">
+            <h2>Introduction à la Cryptographie</h2>
+            <div class="crypto-definition">
+                <p>La <strong>cryptographie</strong> est la science qui étudie les moyens de transformer un message clair en un message codé incompréhensible pour ceux qui ne possèdent pas la clé de déchiffrement.</p>
+                <p>Elle est utilisée depuis l'Antiquité pour protéger des informations sensibles, et est aujourd'hui au cœur de la sécurité informatique.</p>
+            </div>
+            
+            <div class="crypto-history">
+                <h3>Histoire de la Cryptographie</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Antiquité</div>
+                        <div class="timeline-content">
+                            <h4>Le chiffre de César</h4>
+                            <p>L'un des plus anciens systèmes de chiffrement connu, utilisé par Jules César pour ses correspondances secrètes. Il consiste à décaler chaque lettre de l'alphabet d'un nombre fixe de positions.</p>
+                            <div class="example-box">
+                                <p>Exemple avec un décalage de 3 :</p>
+                                <p>A → D, B → E, C → F, etc.</p>
+                                <p>"HELLO" devient "KHOOR"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Moyen Âge</div>
+                        <div class="timeline-content">
+                            <h4>Chiffres de substitution</h4>
+                            <p>Développement de méthodes plus complexes où chaque lettre est remplacée par un symbole ou une autre lettre selon une table de correspondance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Renaissance</div>
+                        <div class="timeline-content">
+                            <h4>Chiffre de Vigenère</h4>
+                            <p>Système de chiffrement polyalphabétique utilisant une série de chiffres de César différents basés sur les lettres d'un mot-clé.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">XXe siècle</div>
+                        <div class="timeline-content">
+                            <h4>Enigma</h4>
+                            <p>Machine de chiffrement électromécanique utilisée par l'Allemagne nazie pendant la Seconde Guerre mondiale. Son déchiffrement par les Alliés a joué un rôle crucial dans l'issue du conflit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Ère moderne</div>
+                        <div class="timeline-content">
+                            <h4>Cryptographie asymétrique</h4>
+                            <p>Développement de systèmes à clé publique/privée comme RSA, permettant des communications sécurisées sans échange préalable de clé secrète.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aujourd'hui</div>
+                        <div class="timeline-content">
+                            <h4>Cryptographie quantique</h4>
+                            <p>Utilisation des principes de la mécanique quantique pour créer des systèmes de chiffrement théoriquement inviolables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="crypto-interactive">
+            <h2>Outils Cryptographiques Interactifs</h2>
+            
+            <div class="crypto-tools">
+                <div class="tool-card" id="caesar-cipher">
+                    <h3>Chiffre de César</h3>
+                    <div class="tool-content">
+                        <p>Entrez un message et choisissez un décalage pour voir le résultat du chiffrement.</p>
+                        <div class="tool-inputs">
+                            <div class="form-group">
+                                <label for="caesar-input">Message :</label>
+                                <input type="text" id="caesar-input" placeholder="Entrez votre message">
+                            </div>
+                            <div class="form-group">
+                                <label for="caesar-shift">Décalage :</label>
+                                <input type="number" id="caesar-shift" min="1" max="25" value="3">
+                            </div>
+                            <button id="caesar-encrypt" class="btn-primary">Chiffrer</button>
+                            <button id="caesar-decrypt" class="btn-secondary">Déchiffrer</button>
+                        </div>
+                        <div class="tool-result">
+                            <h4>Résultat :</h4>
+                            <div id="caesar-result" class="result-box"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card" id="vigenere-cipher">
+                    <h3>Chiffre de Vigenère</h3>
+                    <div class="tool-content">
+                        <p>Entrez un message et une clé pour voir le résultat du chiffrement.</p>
+                        <div class="tool-inputs">
+                            <div class="form-group">
+                                <label for="vigenere-input">Message :</label>
+                                <input type="text" id="vigenere-input" placeholder="Entrez votre message">
+                            </div>
+                            <div class="form-group">
+                                <label for="vigenere-key">Clé :</label>
+                                <input type="text" id="vigenere-key" placeholder="Entrez la clé">
+                            </div>
+                            <button id="vigenere-encrypt" class="btn-primary">Chiffrer</button>
+                            <button id="vigenere-decrypt" class="btn-secondary">Déchiffrer</button>
+                        </div>
+                        <div class="tool-result">
+                            <h4>Résultat :</h4>
+                            <div id="vigenere-result" class="result-box"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card" id="base64-encoding">
+                    <h3>Encodage Base64</h3>
+                    <div class="tool-content">
+                        <p>Entrez un texte pour voir son encodage en Base64.</p>
+                        <div class="tool-inputs">
+                            <div class="form-group">
+                                <label for="base64-input">Texte :</label>
+                                <input type="text" id="base64-input" placeholder="Entrez votre texte">
+                            </div>
+                            <button id="base64-encode" class="btn-primary">Encoder</button>
+                            <button id="base64-decode" class="btn-secondary">Décoder</button>
+                        </div>
+                        <div class="tool-result">
+                            <h4>Résultat :</h4>
+                            <div id="base64-result" class="result-box"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card" id="hash-generator">
+                    <h3>Générateur de Hachage</h3>
+                    <div class="tool-content">
+                        <p>Entrez un texte pour générer différentes valeurs de hachage.</p>
+                        <div class="tool-inputs">
+                            <div class="form-group">
+                                <label for="hash-input">Texte :</label>
+                                <input type="text" id="hash-input" placeholder="Entrez votre texte">
+                            </div>
+                            <div class="form-group">
+                                <label for="hash-algorithm">Algorithme :</label>
+                                <select id="hash-algorithm">
+                                    <option value="md5">MD5</option>
+                                    <option value="sha1">SHA-1</option>
+                                    <option value="sha256">SHA-256</option>
+                                </select>
+                            </div>
+                            <button id="hash-generate" class="btn-primary">Générer</button>
+                        </div>
+                        <div class="tool-result">
+                            <h4>Résultat :</h4>
+                            <div id="hash-result" class="result-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cybersecurity">
+            <h2>Sensibilisation à la Cybersécurité</h2>
+            
+            <div class="security-principles">
+                <h3>Principes Fondamentaux</h3>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon"><i class="fas fa-lock"></i></div>
+                        <h4>Confidentialité</h4>
+                        <p>Protection des données contre l'accès non autorisé. Seules les personnes autorisées peuvent accéder aux informations.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Intégrité</h4>
+                        <p>Garantie que les données n'ont pas été modifiées de manière non autorisée. Les informations restent exactes et fiables.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Disponibilité</h4>
+                        <p>Assurance que les systèmes et les données sont accessibles lorsque nécessaire pour les utilisateurs autorisés.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon"><i class="fas fa-user-check"></i></div>
+                        <h4>Authentification</h4>
+                        <p>Vérification de l'identité des utilisateurs avant de leur accorder l'accès aux systèmes ou aux données.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon"><i class="fas fa-key"></i></div>
+                        <h4>Autorisation</h4>
+                        <p>Détermination des actions qu'un utilisateur authentifié est autorisé à effectuer sur un système.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon"><i class="fas fa-history"></i></div>
+                        <h4>Non-répudiation</h4>
+                        <p>Impossibilité pour un utilisateur de nier avoir effectué une action, grâce à des preuves de son identité et de ses actions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security-threats">
+                <h3>Menaces Courantes</h3>
+                <div class="threats-accordion">
+                    <div class="threat-item">
+                        <div class="threat-header">
+                            <h4><i class="fas fa-fish"></i> Phishing</h4>
+                            <span class="threat-toggle">+</span>
+                        </div>
+                        <div class="threat-content">
+                            <p>Technique frauduleuse visant à obtenir des informations personnelles en se faisant passer pour une entité de confiance.</p>
+                            <div class="threat-example">
+                                <h5>Comment se protéger :</h5>
+                                <ul>
+                                    <li>Vérifiez l'adresse email de l'expéditeur</li>
+                                    <li>Ne cliquez pas sur les liens suspects</li>
+                                    <li>Ne communiquez jamais vos mots de passe ou informations bancaires par email</li>
+                                    <li>Utilisez l'authentification à deux facteurs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="threat-item">
+                        <div class="threat-header">
+                            <h4><i class="fas fa-bug"></i> Malwares</h4>
+                            <span class="threat-toggle">+</span>
+                        </div>
+                        <div class="threat-content">
+                            <p>Logiciels malveillants conçus pour s'infiltrer dans un système informatique sans le consentement de l'utilisateur.</p>
+                            <div class="threat-example">
+                                <h5>Types courants :</h5>
+                                <ul>
+                                    <li><strong>Virus</strong> : Se propage en s'attachant à d'autres programmes</li>
+                                    <li><strong>Vers</strong> : Se propage de manière autonome via les réseaux</li>
+                                    <li><strong>Chevaux de Troie</strong> : Se présente comme un logiciel légitime</li>
+                                    <li><strong>Ransomware</strong> : Chiffre les données et demande une rançon</li>
+                                    <li><strong>Spyware</strong> : Collecte des informations à l'insu de l'utilisateur</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="threat-item">
+                        <div class="threat-header">
+                            <h4><i class="fas fa-user-secret"></i> Ingénierie Sociale</h4>
+                            <span class="threat-toggle">+</span>
+                        </div>
+                        <div class="threat-content">
+                            <p>Manipulation psychologique visant à inciter des personnes à divulguer des informations confidentielles ou à effectuer des actions compromettantes.</p>
+                            <div class="threat-example">
+                                <h5>Techniques courantes :</h5>
+                                <ul>
+                                    <li><strong>Prétexting</strong> : Création d'un scénario fictif pour obtenir des informations</li>
+                                    <li><strong>Baiting</strong> : Offre d'un objet ou service attrayant pour piéger la victime</li>
+                                    <li><strong>Quid pro quo</strong> : Offre d'un service en échange d'informations</li>
+                                    <li><strong>Tailgating</strong> : Suivre une personne autorisée pour accéder à une zone sécurisée</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="threat-item">
+                        <div class="threat-header">
+                            <h4><i class="fas fa-server"></i> Attaques par Déni de Service</h4>
+                            <span class="threat-toggle">+</span>
+                        </div>
+                        <div class="threat-content">
+                            <p>Attaques visant à rendre un service indisponible en surchargeant ses ressources.</p>
+                            <div class="threat-example">
+                                <h5>Types d'attaques DDoS :</h5>
+                                <ul>
+                                    <li><strong>Attaques volumétriques</strong> : Saturation de la bande passante</li>
+                                    <li><strong>Attaques protocolaires</strong> : Exploitation des faiblesses des protocoles</li>
+                                    <li><strong>Attaques applicatives</strong> : Ciblage des vulnérabilités des applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="threat-item">
+                        <div class="threat-header">
+                            <h4><i class="fas fa-database"></i> Injection SQL</h4>
+                            <span class="threat-toggle">+</span>
+                        </div>
+                        <div class="threat-content">
+                            <p>Technique d'attaque consistant à injecter du code SQL malveillant dans les requêtes d'une application pour accéder ou modifier des données.</p>
+                            <div class="threat-example">
+                                <h5>Exemple simple :</h5>
+                                <p>Requête normale : <code>SELECT * FROM users WHERE username = 'nom' AND password = 'motdepasse'</code></p>
+                                <p>Injection : <code>SELECT * FROM users WHERE username = 'admin'--' AND password = 'peu importe'</code></p>
+                                <p>Le <code>--</code> commente le reste de la requête, permettant de se connecter sans connaître le mot de passe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security-best-practices">
+                <h3>Bonnes Pratiques</h3>
+                <div class="practices-list">
+                    <div class="practice-item">
+                        <div class="practice-icon"><i class="fas fa-key"></i></div>
+                        <div class="practice-content">
+                            <h4>Mots de passe forts</h4>
+                            <p>Utilisez des mots de passe longs, complexes et uniques pour chaque service. Privilégiez les phrases de passe et utilisez un gestionnaire de mots de passe.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="practice-content">
+                            <h4>Authentification à deux facteurs</h4>
+                            <p>Activez l'authentification à deux facteurs (2FA) pour ajouter une couche de sécurité supplémentaire à vos comptes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-icon"><i class="fas fa-sync"></i></div>
+                        <div class="practice-content">
+                            <h4>Mises à jour régulières</h4>
+                            <p>Maintenez vos systèmes d'exploitation, applications et antivirus à jour pour corriger les vulnérabilités connues.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="practice-content">
+                            <h4>Sauvegardes régulières</h4>
+                            <p>Effectuez des sauvegardes régulières de vos données importantes et testez leur restauration.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="practice-content">
+                            <h4>Méfiance envers les emails</h4>
+                            <p>Soyez vigilant face aux emails suspects, ne cliquez pas sur les liens douteux et ne téléchargez pas les pièces jointes non sollicitées.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-icon"><i class="fas fa-wifi"></i></div>
+                        <div class="practice-content">
+                            <h4>Réseaux Wi-Fi publics</h4>
+                            <p>Évitez de vous connecter à des réseaux Wi-Fi publics non sécurisés, ou utilisez un VPN pour chiffrer vos communications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hacking-history">
+            <h2>Histoire du Hacking Éthique</h2>
+            
+            <div class="hacking-definition">
+                <p>Le <strong>hacking éthique</strong> désigne l'acte de pénétrer dans un système informatique avec l'autorisation explicite du propriétaire, dans le but d'identifier et de corriger les vulnérabilités de sécurité.</p>
+                <p>Contrairement au hacking malveillant, le hacking éthique vise à améliorer la sécurité des systèmes et à protéger les données des utilisateurs.</p>
+            </div>
+            
+            <div class="hackers-types">
+                <h3>Types de Hackers</h3>
+                <div class="hackers-grid">
+                    <div class="hacker-card white-hat">
+                        <h4>White Hat</h4>
+                        <p>Hackers éthiques qui travaillent avec l'autorisation des propriétaires de systèmes pour améliorer la sécurité.</p>
+                        <p>Exemples : Consultants en sécurité, chercheurs en sécurité, pentesteurs.</p>
+                    </div>
+                    
+                    <div class="hacker-card black-hat">
+                        <h4>Black Hat</h4>
+                        <p>Hackers malveillants qui exploitent les vulnérabilités pour des gains personnels ou pour causer des dommages.</p>
+                        <p>Activités : Vol de données, fraude, sabotage, etc.</p>
+                    </div>
+                    
+                    <div class="hacker-card grey-hat">
+                        <h4>Grey Hat</h4>
+                        <p>Hackers qui opèrent dans une zone grise, parfois sans autorisation mais sans intention malveillante.</p>
+                        <p>Exemple : Divulgation publique de vulnérabilités sans autorisation préalable.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="famous-hackers">
+                <h3>Hackers Célèbres</h3>
+                <div class="hackers-list">
+                    <div class="famous-hacker">
+                        <h4>Kevin Mitnick</h4>
+                        <p>Ancien black hat devenu consultant en sécurité. Il a été l'un des hackers les plus recherchés par le FBI dans les années 1990.</p>
+                    </div>
+                    
+                    <div class="famous-hacker">
+                        <h4>Linus Torvalds</h4>
+                        <p>Créateur du noyau Linux, considéré comme un hacker au sens original du terme : quelqu'un qui modifie des systèmes pour les améliorer.</p>
+                    </div>
+                    
+                    <div class="famous-hacker">
+                        <h4>Tim Berners-Lee</h4>
+                        <p>Inventeur du World Wide Web, il a "hacké" Internet en créant le protocole HTTP et le langage HTML.</p>
+                    </div>
+                    
+                    <div class="famous-hacker">
+                        <h4>Richard Stallman</h4>
+                        <p>Fondateur du mouvement du logiciel libre et de la Free Software Foundation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hacking-culture">
+                <h3>Culture Hacker</h3>
+                <div class="culture-content">
+                    <p>La culture hacker est fondée sur plusieurs principes :</p>
+                    <ul>
+                        <li><strong>Partage</strong> : Les connaissances et les informations doivent être librement accessibles</li>
+                        <li><strong>Ouverture</strong> : Les systèmes doivent être ouverts pour être améliorés</li>
+                        <li><strong>Décentralisation</strong> : Méfiance envers l'autorité centralisée</li>
+                        <li><strong>Méritocratie</strong> : Jugement basé sur les compétences et non sur les critères sociaux</li>
+                        <li><strong>Créativité</strong> : Valorisation de l'innovation et de la pensée non conventionnelle</li>
+                    </ul>
+                    
+                    <div class="quote-box">
+                        <blockquote>
+                            "L'accès aux ordinateurs - et à tout ce qui peut vous apprendre quelque chose sur la façon dont le monde fonctionne - devrait être illimité et total."
+                            <cite>— Extrait de l'Éthique des Hackers</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lycée Jean Prévost - Montivilliers, France</p>
+        <p>Projet éducatif de chasse au trésor</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/logo-placeholder.js"></script>
+    <script src="js/hero-placeholder.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/visual-feedback.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/hacker-theme.js"></script>
+    <script src="js/secret-phrases.js"></script>
+    <script src="js/hacker-effects.js"></script>
+    <script src="js/binary-game.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script type="module" src="js/user-profile-main.js"></script>
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/crypto.js"></script>
+</body>
+</html>

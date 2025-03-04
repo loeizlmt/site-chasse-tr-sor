@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visites Virtuelles - Chasse au Trésor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hacker-theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav-overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <script>
+        // Direct inline function to toggle mobile menu
+        function toggleMobileMenu() {
+            console.log('Toggle mobile menu called');
+            var nav = document.querySelector('header nav');
+            var menuToggle = document.getElementById('menu-toggle');
+            
+            // Toggle the is-open class
+            if (nav.classList.contains('is-open')) {
+                nav.classList.remove('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                console.log('Menu closed');
+            } else {
+                nav.classList.add('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                console.log('Menu opened');
+            }
+        }
+        
+        // Add event listeners to close menu when links are clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    var nav = document.querySelector('header nav');
+                    var menuToggle = document.getElementById('menu-toggle');
+                    nav.classList.remove('is-open');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        });
+    </script>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Lycée Jean Prévost" id="logo-img">
+            <h1>Chasse au Trésor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="visite.html" class="active">Visites Virtuelles</a></li>
+                <li><a href="mini-jeux.html">Mini-Jeux</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Ressources+</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="crypto.html">Cryptographie</a></li>
+                    </ul>
+                </li>
+                <li><a href="credits.html">Crédits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Visites Virtuelles du Lycée</h2>
+                <p>Explorez les différents espaces du lycée Jean Prévost et découvrez les QR codes cachés qui vous mèneront aux mini-jeux.</p>
+            </div>
+        </section>
+
+        <section class="visits">
+            <h2>Sélectionnez un lieu à visiter</h2>
+            
+            <div class="visit-selector">
+                <div class="form-group">
+                    <label for="visit-select">Choisissez un lieu :</label>
+                    <select id="visit-select" class="visit-dropdown">
+                        <option value="" disabled selected>-- Sélectionnez un lieu --</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="visit-description" id="visit-description">
+                    <p>Sélectionnez un lieu pour commencer votre visite virtuelle.</p>
+                </div>
+            </div>
+            
+            <div class="iframe-container" id="iframe-container">
+                <div class="placeholder-message">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Sélectionnez un lieu pour commencer la visite</h3>
+                    <p>Utilisez le menu déroulant ci-dessus pour choisir un espace du lycée à explorer.</p>
+                </div>
+            </div>
+            
+            <div class="visit-instructions">
+                <h3><i class="fas fa-info-circle"></i> Comment explorer</h3>
+                <ul>
+                    <li><i class="fas fa-mouse-pointer"></i> <strong>Cliquez et faites glisser</strong> pour regarder autour de vous</li>
+                    <li><i class="fas fa-arrows-alt"></i> <strong>Utilisez les flèches</strong> pour vous déplacer dans l'espace</li>
+                    <li><i class="fas fa-search"></i> <strong>Cherchez les QR codes</strong> cachés dans chaque espace</li>
+                    <li><i class="fas fa-qrcode"></i> <strong>Scannez les QR codes</strong> avec votre appareil pour accéder aux mini-jeux</li>
+                </ul>
+            </div>
+            
+            <div class="qr-code-hint">
+                <h3>Indice pour les QR codes</h3>
+                <p>Les QR codes sont cachés dans des endroits stratégiques de chaque espace. Cherchez des objets ou zones qui pourraient avoir un lien avec l'éducation, l'histoire du lycée ou les thèmes des mini-jeux.</p>
+                <div class="qr-examples">
+                    <div class="qr-example">
+                        <img src="images/qr-example.png" alt="Exemple de QR code">
+                        <p>Exemple de QR code à chercher</p>
+                    </div>
+                    <div class="qr-example">
+                        <div class="qr-scan-steps">
+                            <p><strong>1.</strong> Repérez un QR code dans la visite virtuelle</p>
+                            <p><strong>2.</strong> Scannez-le avec l'appareil photo de votre téléphone</p>
+                            <p><strong>3.</strong> Suivez le lien vers le mini-jeu correspondant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress">
+            <h2>Votre progression</h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-stats">
+                    <p>Mini-jeux complétés: <span id="completed-games">0</span>/6</p>
+                    <p>Citation: <span id="quote-progress">0</span>%</p>
+                </div>
+                <button id="reset-progress" class="btn-secondary">Réinitialiser la progression</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lycée Jean Prévost - Montivilliers, France</p>
+        <p>Projet éducatif de chasse au trésor</p>
+    </footer>
+
+    <!-- Mobile Navigation Overlay -->
+    <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="mobile-nav-overlay">
+        <button class="mobile-menu-close" aria-label="Fermer le menu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Accueil</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="visite.html" class="mobile-nav-link active">Visites Virtuelles</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="mini-jeux.html" class="mobile-nav-link">Mini-Jeux</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="solution.html" class="mobile-nav-link">Solution</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-submenu">
+                    Ressources
+                    <button class="mobile-submenu-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </a>
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-item">
+                        <a href="ressources.html" class="mobile-submenu-link">Ressources</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="archives.html" class="mobile-submenu-link">Archives</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="crypto.html" class="mobile-submenu-link">Cryptographie</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="credits.html" class="mobile-nav-link">Crédits</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logo-placeholder.js"></script>
+    <script src="js/qr-placeholder.js"></script>
+    <script src="js/hero-placeholder.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav-overlay.js"></script>
+    <script src="js/visual-feedback.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/visite.js"></script>
+    <script src="js/hacker-theme.js"></script>
+    <script src="js/secret-phrases.js"></script>
+    <script src="js/hacker-effects.js"></script>
+    <script src="js/binary-game.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script type="module" src="js/user-profile-main.js"></script>
+</body>
+</html>

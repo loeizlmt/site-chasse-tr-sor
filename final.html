@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Épreuve Finale - Chasse au Trésor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hacker-theme.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav-overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <script>
+        // Direct inline function to toggle mobile menu
+        function toggleMobileMenu() {
+            console.log('Toggle mobile menu called');
+            var nav = document.querySelector('header nav');
+            var menuToggle = document.getElementById('menu-toggle');
+            
+            // Toggle the is-open class
+            if (nav.classList.contains('is-open')) {
+                nav.classList.remove('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                console.log('Menu closed');
+            } else {
+                nav.classList.add('is-open');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                console.log('Menu opened');
+            }
+        }
+        
+        // Add event listeners to close menu when links are clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    var nav = document.querySelector('header nav');
+                    var menuToggle = document.getElementById('menu-toggle');
+                    nav.classList.remove('is-open');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        });
+    </script>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Lycée Jean Prévost" id="logo-img">
+            <h1>Chasse au Trésor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="visite.html">Visites Virtuelles</a></li>
+                <li><a href="mini-jeux.html">Mini-Jeux</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Ressources+</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="crypto.html">Cryptographie</a></li>
+                    </ul>
+                </li>
+                <li><a href="credits.html">Crédits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Épreuve Finale</h2>
+                <p>Félicitations pour avoir reconstitué la citation ! Voici la dernière étape de votre aventure : écoutez attentivement l'extrait musical, identifiez les indices demandés, puis rédigez une courte nouvelle inspirée par ces éléments.</p>
+            </div>
+        </section>
+
+        <section class="music-challenge">
+            <h2>Écoutez et Identifiez</h2>
+            
+            <div class="music-player" id="music-player">
+                <h3>Extrait Musical</h3>
+                <p>Écoutez attentivement l'extrait musical ci-dessous et identifiez les éléments demandés.</p>
+                
+                <div class="video-container" id="video-container">
+                    <!-- Video will be loaded by JavaScript -->
+                    <div class="placeholder-message">
+                        <i class="fas fa-music"></i>
+                        <h3>Chargement de l'extrait musical...</h3>
+                        <p>Si l'extrait ne se charge pas, cliquez sur le bouton ci-dessous pour en sélectionner un autre.</p>
+                        <button id="change-clip" class="btn-secondary">Changer d'extrait</button>
+                    </div>
+                </div>
+                
+                <div class="clues-form">
+                    <h3>Identifiez les 3 indices</h3>
+                    <p>Après avoir écouté l'extrait, identifiez les 3 éléments suivants :</p>
+                    
+                    <div class="form-group">
+                        <label for="clue1">Indice 1 : Thème principal de la chanson</label>
+                        <input type="text" id="clue1" placeholder="Ex: l'amour, la nostalgie, la liberté...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clue2">Indice 2 : Époque ou période évoquée</label>
+                        <input type="text" id="clue2" placeholder="Ex: années 60, printemps, enfance...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clue3">Indice 3 : Émotion principale ressentie</label>
+                        <input type="text" id="clue3" placeholder="Ex: joie, mélancolie, espoir...">
+                    </div>
+                    
+                    <button id="validate-clues" class="btn-primary" onclick="validateCluesDirectly()">Valider les indices</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="writing-challenge hidden" id="writing-challenge">
+            <h2>Instructions Finales</h2>
+            
+            <div class="final-instructions">
+                <div class="selected-clues" id="selected-clues">
+                    <h4>Vos indices identifiés :</h4>
+                    <ul>
+                        <li>Thème : <span id="selected-clue1"></span></li>
+                        <li>Époque : <span id="selected-clue2"></span></li>
+                        <li>Émotion : <span id="selected-clue3"></span></li>
+                    </ul>
+                </div>
+                
+                <div class="instructions-content" id="instructions-content">
+                    <!-- Instructions will be loaded from JSON file -->
+                    <div class="loading">Chargement des instructions...</div>
+                </div>
+                
+                <div class="email-link-container">
+                    <a href="#" id="email-link" class="btn-primary">
+                        <i class="fas fa-envelope"></i> Ouvrir dans votre client email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="completion-message hidden" id="completion-message">
+            <h2>Félicitations !</h2>
+            
+            <div class="completion-content">
+                <i class="fas fa-trophy"></i>
+                <h3>Vous avez terminé la Chasse au Trésor !</h3>
+                <p>Votre nouvelle a été envoyée avec succès. Merci d'avoir participé à cette aventure éducative et créative !</p>
+                <p>N'hésitez pas à explorer les autres sections du site pour revivre certaines parties de l'aventure.</p>
+                <a href="index.html" class="btn-primary">Retour à l'accueil</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lycée Jean Prévost - Montivilliers, France</p>
+        <p>Projet éducatif de chasse au trésor</p>
+    </footer>
+
+    <!-- Mobile Navigation Overlay -->
+    <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="mobile-nav-overlay">
+        <button class="mobile-menu-close" aria-label="Fermer le menu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Accueil</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="visite.html" class="mobile-nav-link">Visites Virtuelles</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="mini-jeux.html" class="mobile-nav-link">Mini-Jeux</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="solution.html" class="mobile-nav-link">Solution</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link has-submenu">
+                    Ressources
+                    <button class="mobile-submenu-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </a>
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-item">
+                        <a href="ressources.html" class="mobile-submenu-link">Ressources</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="archives.html" class="mobile-submenu-link">Archives</a>
+                    </li>
+                    <li class="mobile-submenu-item">
+                        <a href="crypto.html" class="mobile-submenu-link">Cryptographie</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="credits.html" class="mobile-nav-link">Crédits</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logo-placeholder.js"></script>
+    <script src="js/hero-placeholder.js"></script>
+    <script src="js/music-visualizer.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav-overlay.js"></script>
+    <script src="js/visual-feedback.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/final.js"></script>
+    <script src="js/hacker-theme.js"></script>
+    <script src="js/secret-phrases.js"></script>
+    <script src="js/hacker-effects.js"></script>
+    <script src="js/binary-game.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script type="module" src="js/user-profile-main.js"></script>
+</body>
+</html>
