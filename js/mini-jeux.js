@@ -128,7 +128,7 @@ function createGameCard(game, quoteFragment) {
  */
 function simulateGameCompletion(game, quoteFragment) {
     // Show a confirmation dialog
-    const playConfirm = confirm(`Voulez-vous ${gameState.isGameCompleted(game.id) ? 'rejouer' : 'jouer'} à "${game.name}" ?`);
+    const playConfirm = confirm(`Avez-vous joué ${gameState.isGameCompleted(game.id) ? 'rejouer' : 'jouer'} à "${game.name}" ?`);
     
     if (!playConfirm) return;
     
