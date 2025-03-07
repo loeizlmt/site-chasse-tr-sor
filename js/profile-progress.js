@@ -43,7 +43,7 @@ function recordVisitedPage(pageUrl) {
     }
     
     // Save profile
-    saveUserProfile();
+    //saveUserProfile();
 }
 
 /**
