@@ -45,10 +45,6 @@ header {
     z-index: 100;
 }
 
-.en-tete {
-    color : var(--en-tete-color) ;
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -323,6 +319,11 @@ footer {
     .school-presentation .container,
     .jean-prevost .container {
         flex-direction: column;
+        background-color : #000000 ;
+    }
+
+    .school-pressentation {
+        background-color : #000000 ;   
     }
     
     .school-image,
@@ -738,4 +739,8 @@ input:focus, textarea:focus, select:focus {
     .portrait {
         margin-bottom: 2rem;
     }
+}
+
+.quote-container {
+    background-color : var(--)
 }
