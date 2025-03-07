@@ -310,7 +310,7 @@ function addVisualStyles() {
         }
         
         .input-effect label {
-            position: absolute;
+            /*position: absolute;*/
             top: 0.8rem;
             left: 0.8rem;
             transition: all 0.3s;
