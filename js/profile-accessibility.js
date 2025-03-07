@@ -424,6 +424,9 @@ function addAccessibilityStyles() {
             opacity: 0;
             width: 0;
             height: 0;
+            top: -10px;
+            position: relative;
+            z-index: 10;
         }
         
         .slider {
