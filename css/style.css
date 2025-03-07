@@ -45,6 +45,10 @@ header {
     z-index: 100;
 }
 
+.en-tete {
+    color : var(--en-tete-color) ;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -72,7 +76,7 @@ nav ul {
 }
 
 nav a {
-    color: var(--dark-color);
+    color: var(--en-tete-color);
     font-weight: 500;
     padding: 0.5rem 0;
     position: relative;
