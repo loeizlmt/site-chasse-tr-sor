@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.textContent = `
         .final-instructions {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -507,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .email-info {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 1.5rem;
             border-radius: 10px;
             margin: 1.5rem 0;
@@ -543,7 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .clip-info {
             margin-top: 1rem;
             padding: 1rem;
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             border-radius: 5px;
         }
         
@@ -560,14 +560,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .clues-form {
             margin-top: 2rem;
             padding: 1.5rem;
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             border-radius: 10px;
         }
         
         .selected-clues {
             margin-bottom: 1.5rem;
             padding: 1rem;
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             border-radius: 5px;
         }
         
@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .email-instructions {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 1.5rem;
             border-radius: 10px;
             margin: 1.5rem 0;

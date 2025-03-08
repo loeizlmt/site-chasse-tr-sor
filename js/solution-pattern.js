@@ -31,7 +31,7 @@ function generateSolutionPattern() {
     style.textContent = `
         .solution {
             position: relative;
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 3rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@ function generateSolutionPattern() {
         }
         
         .quote-submission {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -65,7 +65,7 @@ function generateSolutionPattern() {
         
         .final-challenge {
             position: relative;
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 3rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

@@ -215,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.textContent = `
         .quote-submission {
-            background-color: white;
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -246,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .collected-fragments {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -298,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .final-challenge {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

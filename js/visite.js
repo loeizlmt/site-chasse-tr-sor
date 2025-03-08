@@ -217,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
             align-items: center;
             justify-content: center;
             height: 400px;
-            background-color: #f8f9fa;
             border-radius: 10px;
             text-align: center;
             padding: 2rem;
@@ -266,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .visit-description {
-            background-color: white;
             border-radius: 10px;
             padding: 1.5rem;
             margin: 1rem 0 2rem;

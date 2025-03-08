@@ -37,7 +37,7 @@ img {
 
 /* Header Styles */
 header {
-    background-color: white;
+    background-color: var(--light-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     position: sticky;
@@ -195,7 +195,7 @@ h2::after {
 }
 
 .rule-card {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -220,7 +220,7 @@ h2::after {
 
 /* Progress Section */
 .progress-container {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -250,7 +250,7 @@ h2::after {
 /* Footer */
 footer {
     background-color: var(--dark-color);
-    color: white;
+    color: var(--light-color);
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
@@ -456,7 +456,7 @@ footer {
     border : none;
 }
 
-.form-group label, .form-group select {
+.form-group select {
     background-color : var(--light-color);
 }
 .visit-description {
@@ -467,6 +467,10 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
+}
+
+.form-group label {
+    background-color : var(--light-color);
 }
 
 input, textarea, select {
@@ -490,7 +494,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .game-card {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -546,7 +550,7 @@ input:focus, textarea:focus, select:focus {
 
 /* Game Container */
 .game-container {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -566,7 +570,7 @@ input:focus, textarea:focus, select:focus {
 
 /* Music Player */
 .music-player {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -579,7 +583,7 @@ input:focus, textarea:focus, select:focus {
 
 /* Writing Area */
 .writing-area {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -660,7 +664,7 @@ input:focus, textarea:focus, select:focus {
 /* Jean Prévost Biography Section */
 .jean-prevost {
     padding: 3rem 0;
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 3rem;
@@ -700,7 +704,7 @@ input:focus, textarea:focus, select:focus {
     padding: 1rem 2rem;
     margin: 2rem 0;
     border-left: 5px solid var(--primary-color);
-    background-color: #f8f9fa;
+    background-color: var(--light-color);
 }
 
 .biography cite {
@@ -754,10 +758,6 @@ input:focus, textarea:focus, select:focus {
 }
 
 .solution {
-    background-color : var(--light-color);
-}
-
-.quote-submission {
     background-color : var(--light-color);
 }
 

@@ -448,7 +448,7 @@ function addAccessibilityStyles() {
             width: 16px;
             left: 4px;
             bottom: 4px;
-            background-color: white;
+            background-color: var(--light-color);
             transition: .4s;
             border-radius: 50%;
         }

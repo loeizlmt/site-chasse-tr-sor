@@ -23,7 +23,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: var(--light-color);
     min-width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -54,7 +54,7 @@
 }
 
 .dropdown-menu a:hover {
-    background-color: #f8f9fa;
+    background-color: var(--light-color);
     color: var(--primary-color);
 }
 

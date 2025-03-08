@@ -239,7 +239,7 @@ function addProfileStyles() {
         }
         
         .profile-content {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 20px;
             width: 90%;

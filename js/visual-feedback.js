@@ -316,7 +316,7 @@ function addVisualStyles() {
             transition: all 0.3s;
             pointer-events: none;
             padding: 0 0.5rem;
-            background-color: white;
+            background-color: var(--light-color);
             color: #6c757d;
         }
         
