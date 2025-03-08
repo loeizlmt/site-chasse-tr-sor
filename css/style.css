@@ -432,6 +432,7 @@ footer {
 
 /* Iframe Styles */
 .iframe-container {
+    background-color : var(--light-color);
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -455,8 +456,14 @@ footer {
     border : none;
 }
 
-label {
+.form-group label, .form-group select {
     background-color : var(--light-color);
+}
+.visit-description {
+    background-color : var(--light-color);
+}
+
+label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -758,4 +765,16 @@ input:focus, textarea:focus, select:focus {
     background-color : var(--light-color);
     border-width : 2px;
     border-color : var(--secondary-color);
+}
+
+h3 {
+    color : var(--primary-color);
+}
+
+.visit-selector {
+    background-color : var(--light-color);
+}
+
+.form-group {
+    background-color : var(--light-color);
 }
