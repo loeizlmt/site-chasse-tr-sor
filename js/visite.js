@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .visit-instructions {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 1.5rem;
             margin: 2rem 0;
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .qr-code-hint {
-            background-color: white;
+            background-color: var(--light-color);
             border-radius: 10px;
             padding: 1.5rem;
             margin: 2rem 0;

@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .empty-quote {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 2rem;
             border-radius: 10px;
             text-align: center;

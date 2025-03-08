@@ -122,7 +122,6 @@ footer {
 .resource-card, 
 .quote-card,
 .progress-container,
-.form-group,
 .music-player,
 .writing-area {
     background-color: var(--card-bg-color);
