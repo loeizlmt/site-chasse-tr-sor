@@ -388,8 +388,9 @@ function addAccessibilityStyles() {
         
         .option-item {
             background-color: var(--light-color);
-            border : 5px;
-            border-color : var(--dark-color);
+            border : solid;
+            border-color : var(--primary-color);
+            border-width : 1px;
             border-radius: 8px;
             padding: 15px;
         }
