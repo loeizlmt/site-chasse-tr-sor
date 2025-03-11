@@ -387,7 +387,9 @@ function addAccessibilityStyles() {
         }
         
         .option-item {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
+            border : 5px;
+            border-color : var(--dark-color);
             border-radius: 8px;
             padding: 15px;
         }
