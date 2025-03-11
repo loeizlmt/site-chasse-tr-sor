@@ -21,7 +21,7 @@
     --button-border-radius: 50px;
     --header-bg: white;
     --footer-bg: var(--dark-color);
-    --hero-overlay: url("../images/photojp.jpg") ;
+    --hero-overlay: url("../images/archives/extérieur/photojp.webp") ;
     --section-border: none;
     --font-headings: var(--font-main);
     --animation-speed: 0.3s;
