@@ -123,7 +123,7 @@ h2::after {
 
 /* Hero Section */
 .hero {
-    background-image: url("../images/photojp.jpg");  /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');*/
+    background-image: url("../images/archives/extérieur/facade-principale.webp");  /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');*/
     background-size: cover;
     background-position: center;
     color: white;

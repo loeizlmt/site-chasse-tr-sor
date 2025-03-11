@@ -190,10 +190,7 @@ function addImagePlaceholders() {
     // Ajouter des styles pour les placeholders
     const style = document.createElement('style');
     style.textContent = `
-        .placeholder-image {
-            filter: grayscale(100%);
-            opacity: 0.7;
-        }
+
         
         .hacker-theme .placeholder-image {
             filter: hue-rotate(120deg) grayscale(50%);

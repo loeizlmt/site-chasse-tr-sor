@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Apply hero overlay */
 .hero {
-    background-image: var(--hero-overlay), url('../images/hero-bg.jpg');
+    background-image: var(--hero-overlay), url('../images/archives/extérieur/facade-principale.webp');
 }
 
 /* Steampunk-specific elements */
