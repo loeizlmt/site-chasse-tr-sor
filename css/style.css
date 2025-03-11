@@ -778,3 +778,13 @@ h3 {
 .form-group {
     background-color : var(--light-color);
 }
+
+.games-instructions {
+    margin-top : 20px;
+    padding : 5px;
+    padding-left : 15px;
+    border : solid;
+    border-width : 3px;
+    border-radius : 10px;
+    border-color : var(--primary-color);
+}

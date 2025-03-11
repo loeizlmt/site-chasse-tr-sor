@@ -171,7 +171,7 @@ function createProgressDisplayUI(container) {
     
     const gamesLabel = document.createElement('span');
     gamesLabel.className = 'stat-label';
-    gamesLabel.textContent = 'Mini-jeux complétés:';
+    gamesLabel.textContent = 'Mini-jeux complétés :';
     
     const gamesValue = document.createElement('span');
     gamesValue.className = 'stat-value';
@@ -187,7 +187,7 @@ function createProgressDisplayUI(container) {
     
     const quoteLabel = document.createElement('span');
     quoteLabel.className = 'stat-label';
-    quoteLabel.textContent = 'Progression de la citation:';
+    quoteLabel.textContent = 'Progression de la citation :';
     
     const quoteValue = document.createElement('span');
     quoteValue.className = 'stat-value';
