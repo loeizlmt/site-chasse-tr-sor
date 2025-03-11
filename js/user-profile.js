@@ -218,7 +218,7 @@ function addProfileStyles() {
         .username-display {
             margin-right: 10px;
             font-weight: bold;
-            color: var(--dark-color);
+            color: var(--primary-color);
         }
         
         .profile-modal {
