@@ -370,10 +370,6 @@ function addProfileStyles() {
             justify-content: space-between;
             margin-top: 20px;
         }
-
-        select {
-            background-color : var(--light-color);
-        }
         
         @media (max-width: 767px) {
             .profile-content {
