@@ -45,7 +45,7 @@
     --button-border-radius: 5px;
     --header-bg: #32281e;
     --footer-bg: #32281e;
-    --hero-overlay: url("../images/photojp.jpg") ; /*linear-gradient(rgba(50, 40, 30, 0.7), rgba(50, 40, 30, 0.7));*/
+    --hero-overlay: url("../images/archives/extérieur/photojp.webp") ; /*linear-gradient(rgba(50, 40, 30, 0.7), rgba(50, 40, 30, 0.7));*/
     --section-border: none ; /*2px solid #b87333;*/
     --font-headings: 'Times New Roman', serif;
     --animation-speed: 0.5s;
@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Apply hero overlay */
 .hero {
-    background-image: var(--hero-overlay), url('../images/archives/extérieur/facade-principale.webp');
+    background-image: var(--hero-overlay), url('../images/archives/extérieur/photojp.webp');
 }
 
 /* Steampunk-specific elements */
