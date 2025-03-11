@@ -182,6 +182,7 @@ function addProfileStyles() {
         .icon-option {
             background-color: #eee;
             color: var(--dark-color);
+            background-color: var(--light-color);
         }
         
         .theme-options {

@@ -479,6 +479,7 @@ input, textarea, select {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: var(--font-main);
+    background-color: var(--light-color);
 }
 
 input:focus, textarea:focus, select:focus {
