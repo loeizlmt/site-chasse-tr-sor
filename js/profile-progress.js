@@ -31,22 +31,6 @@ function recordCompletedGame(gameId, fragmentId) {
 }
 
 /**
- * Records a visited page in the user profile
- * @param {string} pageUrl - The URL of the visited page
- */
-function recordVisitedPage(pageUrl) {
-    const userProfile = getUserProfile();
-    
-    // Add page to visited pages if not already there
-    if (!userProfile.progress.visitedPages.includes(pageUrl)) {
-        userProfile.progress.visitedPages.push(pageUrl);
-    }
-    
-    // Save profile
-    //saveUserProfile();
-}
-
-/**
  * Updates progress display based on user profile
  */
 function updateProgressDisplay() {
@@ -243,13 +227,10 @@ function createProgressDisplayUI(container) {
     container.appendChild(progressSection);
 }
 
-// Record current page visit on module load
-recordVisitedPage(window.location.pathname);
 
 // Export functions
 export {
     recordCompletedGame,
-    recordVisitedPage,
     updateProgressDisplay,
     syncWithGameState,
     getUserProgress,
