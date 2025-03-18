@@ -2,15 +2,15 @@
   "visits": [
     {
       "id": "entrance",
-      "name": "Entrée du Lycée",
-      "url": "https://estebe2000.github.io/a",
-      "description": "Découvrez l'entrée principale du lycée Jean Prévost."
+      "name": "Extérieur du Lycée",
+      "url": "https://ejtjt.github.io/",
+      "description": "Découvrez le lycée Jean Prévost vu de l'extérieur."
     },
     {
       "id": "library",
-      "name": "CDI",
-      "url": "https://www.example.com/visite-virtuelle/cdi",
-      "description": "Explorez le Centre de Documentation et d'Information."
+      "name": "Espaces de détente",
+      "url": "https://ludwigt20.github.io/second-web/",
+      "description": "Explorez les espaces de vie et de détente des lycéens."
     },
     {
       "id": "science",
