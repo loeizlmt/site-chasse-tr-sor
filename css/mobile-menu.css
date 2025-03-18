@@ -22,10 +22,7 @@
 
 /* Mobile Navigation */
 @media (max-width: 767px) {
-    /* Always show the menu toggle button */
-    #menu-toggle {
-        display: flex !important;
-    }
+
     
     /* Hide the regular navigation by default */
     header nav {

@@ -212,6 +212,10 @@
     transition: transform 0.5s;
 }
 
+.gallery-item video {
+    height: 200px;
+}
+
 .gallery-item:hover img {
     transform: scale(1.1);
 }
@@ -222,7 +226,7 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: var(--light-color);
     padding: 10px;
     font-size: 0.9rem;
     transform: translateY(100%);

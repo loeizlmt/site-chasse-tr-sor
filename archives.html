@@ -29,7 +29,7 @@
                     <a href="#" class="dropdown-toggle">Ressources+</a>
                     <ul class="dropdown-menu">
                         <li><a href="ressources.html">Ressources</a></li>
-                        <li><a href="archives.html" class="active">Photos</a></li>
+                        <li><a href="archives.html" class="active">Galerie de photos</a></li>
                         <li><a href="crypto.html">Cryptographie</a></li>
                     </ul>
                 </li>
@@ -41,8 +41,8 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h2>Archives Historiques</h2>
-                <p>Découvrez l'histoire du Lycée Jean Prévost à travers des photos d'archives et des documents historiques.</p>
+                <h2>Galerie</h2>
+                <p>Découvrez en images la vie et les moments forts de notre lycée : un lieu d’apprentissage, d’épanouissement et de partage !</p>
             </div>
         </section>
 
@@ -131,7 +131,7 @@
                         <h3>Le Lycée Aujourd'hui</h3>
                         <p>Le lycée Jean Prévost tel qu'il est aujourd'hui, un établissement moderne tourné vers l'avenir.</p>
                         <div class="timeline-image-container">
-                            <img src="images\ImageActuel.png" class="timeline-image" data-full="images/archives/chronologie/2020s/lycee-2025.jpg">Lycée Jean Prévost en 2025<img>
+                            <img src="images/archives/extérieur/facade-principale.webp" class="timeline-image" data-full="images/archives/chronologie/2020s/lycee-2025.jpg">Lycée Jean Prévost en 2025<img>
                         </div>
                     </div>
                 </div>
@@ -146,68 +146,96 @@
                 <button class="filter-btn" data-filter="classes">Classes</button>
                 <button class="filter-btn" data-filter="evenements">Événements</button>
                 <button class="filter-btn" data-filter="personnalites">Personnalités</button>
+                <button class="filter-btn" data-filter="extérieur">Extérieur</button>
             </div>
             <div class="gallery-grid">
-                <!-- Bâtiments -->
-                <div class="gallery-item" data-category="batiments">
-                    <img src="images/archives/batiments/facade-principale.webp" alt="Façade principale du lycée" data-full="images/archives/batiments/facade-principale.jpg">
-                    <div class="gallery-caption">Façade principale</div>
+                <!-- j'ai déplacé les images dans des dossiers différents pour les classer si jamais vous les cherchez-->
+                
+                <!-- Vidéo de l'extérieur -->
+                <div class="gallery-item" data-category="extérieur">
+                    <video controls>
+                        <source src="images/video/GoogleEarth-JP.mp4" alt="Vidéo - Zoom sur le lycée" data-full="images/video/GoogleEarth-JP.mp4">
+                    </video>
+                    <div class="gallery-caption">Lycée Jean Prévost</div>
                 </div>
-                <div class="gallery-item" data-category="batiments">
-                    <img src="images/archives/batiments/cour-interieure.webp" alt="Cour intérieure" data-full="images/archives/batiments/cour-interieure.jpg">
+
+                
+                
+                <!-- Bâtiments -->
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/facade-principale.webp" alt="Façade principale du lycée" data-full="images/archives/extérieur/facade-principale.webp">
+                    <div class="gallery-caption">Façade principale du lycée</div>
+                </div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/cour-interieure.webp" alt="Cour intérieure" data-full="images/archives/extérieur/cour-interieure.webp">
                     <div class="gallery-caption">Cour intérieure</div>
                 </div>
-                <div class="gallery-item" data-category="batiments">
-                    <img src="images/archives/batiments/gymnase.webp" alt="Gymnase" data-full="images/archives/batiments/gymnase.jpg">
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/gymnase.webp" alt="Gymnase" data-full="images/archives/extérieur/gymnase.webp">
                     <div class="gallery-caption">Gymnase</div>
                 </div>
                 <div class="gallery-item" data-category="batiments">
-                    <img src="images/archives/batiments/cdi-ancien.jpg" alt="Ancien CDI" data-full="images/archives/batiments/cdi-ancien.jpg">
-                    <div class="gallery-caption">Ancien CDI (1988)</div>
+                    <img src="images/archives/batiments/Casiers.webp" alt="Casiers" data-full="images/archives/batiments/Casiers.webp">
+                    <div class="gallery-caption">Casiers</div>
                 </div>
-
-                <!-- Classes -->
-                <div class="gallery-item" data-category="classes">
-                    <img src="images/archives/classes/classe-physique.jpg" alt="Cours de physique" data-full="images/archives/classes/classe-physique.jpg">
-                    <div class="gallery-caption">Cours de physique (1972)</div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/TablesMDL.webp" alt="Tables dans la MDL" data-full="images/archives/extérieur/TablesMDL.webp">
+                    <div class="gallery-caption">Tables dans la MDL</div>
                 </div>
-                <div class="gallery-item" data-category="classes">
-                    <img src="images/archives/classes/classe-lettres.jpg" alt="Cours de lettres" data-full="images/archives/classes/classe-lettres.jpg">
-                    <div class="gallery-caption">Cours de lettres (1978)</div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/Ptet1oiseau.webp" alt="Structure" data-full="images/archives/extérieur/Ptet1oiseau.webp">
+                    <div class="gallery-caption">Structure du lycée</div>
                 </div>
-                <div class="gallery-item" data-category="classes">
-                    <img src="images/archives/classes/classe-info.jpg" alt="Premier cours d'informatique" data-full="images/archives/classes/classe-info.jpg">
-                    <div class="gallery-caption">Premier cours d'informatique (1992)</div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/bassin-poissons.webp" alt="Bassin à poissons" data-full="images/archives/extérieur/bassin-poissons.webp">
+                    <div class="gallery-caption">Bassin à poissons</div>
                 </div>
-                <div class="gallery-item" data-category="classes">
-                    <img src="images/archives/classes/classe-art.jpg" alt="Atelier d'arts plastiques" data-full="images/archives/classes/classe-art.jpg">
-                    <div class="gallery-caption">Atelier d'arts plastiques (1985)</div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/D.webp" alt="Préau du bâtiment D" data-full="images/archives/extérieur/D.webp">
+                    <div class="gallery-caption">Préau du bâtiment D</div>
+                </div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/CoursD.webp" alt="Escalier du bâtiment D" data-full="images/archives/extérieur/CoursD.webp">
+                    <div class="gallery-caption">Escalier du bâtiment D</div>
+                </div>
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/CantineRANG.webp" alt="Rampe devant la cantine" data-full="images/archives/extérieur/CantineRANG.webp">
+                    <div class="gallery-caption">Rampe devant la cantine</div>
+                </div>
+                <div class="gallery-item" data-category="batiments">
+                    <img src="images/archives/batiments/B.webp" alt="Entrée du bâtiment B" data-full="images/archives/batiments/B.webp">
+                    <div class="gallery-caption">Entrée du bâtiment B</div>
                 </div>
 
                 <!-- Événements -->
-                <div class="gallery-item" data-category="evenements">
-                    <img src="images/archives/evenements/remise-diplomes-1980.jpg" alt="Remise de diplômes" data-full="images/archives/evenements/remise-diplomes-1980.jpg">
-                    <div class="gallery-caption">Remise de diplômes (1980)</div>
+
+                <div class="gallery-item" data-category="extérieur">
+                    <img src="images/archives/extérieur/skatepark.webp" alt="skatepark" data-full="images/archives/batiments/skatepark.webp">
+                    <div class="gallery-caption">Ancien skatepark</div>
                 </div>
                 <div class="gallery-item" data-category="evenements">
-                    <img src="images/archives/evenements/spectacle-1990.jpg" alt="Spectacle de fin d'année" data-full="images/archives/evenements/spectacle-1990.jpg">
-                    <div class="gallery-caption">Spectacle de fin d'année (1990)</div>
+                    <img src="images/archives/evenements/Echange à Bramsche 2025.webp" alt="Echange à Bramsche 2025" data-full="images/archives/evenements/Echange à Bramsche 2025.webp">
+                    <div class="gallery-caption">Échange à Bramsche en 2025</div>
                 </div>
                 <div class="gallery-item" data-category="evenements">
-                    <img src="images/archives/evenements/competition-sportive.jpg" alt="Compétition sportive" data-full="images/archives/evenements/competition-sportive.jpg">
-                    <div class="gallery-caption">Compétition sportive (1987)</div>
+                    <img src="images/archives/evenements/unss bad 2023.webp" alt="l'équipe de badminton remporte l'or en 2023" data-full="images/archives/evenements/unss bad 2023.webp">
+                    <div class="gallery-caption">l'équipe de badminton remporte l'or en 2023</div>
                 </div>
                 <div class="gallery-item" data-category="evenements">
-                    <img src="images/archives/evenements/journee-portes-ouvertes.jpg" alt="Journée portes ouvertes" data-full="images/archives/evenements/journee-portes-ouvertes.jpg">
-                    <div class="gallery-caption">Journée portes ouvertes (2000)</div>
+                    <img src="images/archives/evenements/journée solidarité 2023.webp" alt="Journée de la solidarité au lycée en 2023" data-full="images/archives/evenements/journée solidarité 2023.webp">
+                    <div class="gallery-caption">Journée de la solidarité au lycée en 2023</div>
                 </div>
 
                 <!-- Personnalités -->
                 <div class="gallery-item" data-category="personnalites">
-                    <img src="images/archives/personnalites/proviseur-1965.jpg" alt="Premier proviseur" data-full="images/archives/personnalites/proviseur-1965.jpg">
-                    <div class="gallery-caption">Premier proviseur (1965)</div>
+                    <img src="images/archives/personnalites/proviseur.webp" alt="Proviseur" data-full="images/archives/personnalites/proviseur.webp">
+                    <div class="gallery-caption">Proviseur actuel (depuis 2021) : Yoann Barrey</div>
                 </div>
                 <div class="gallery-item" data-category="personnalites">
+                    <img src="images/archives/personnalites/jp.webp" alt="Jean Prévost" data-full="images/archives/personnalites/jp.webp">
+                    <div class="gallery-caption">Jean Prévost</div>
+                </div>
+                <!--<div class="gallery-item" data-category="personnalites">
                     <img src="images/archives/personnalites/visite-ministre.jpg" alt="Visite ministérielle" data-full="images/archives/personnalites/visite-ministre.jpg">
                     <div class="gallery-caption">Visite ministérielle (1975)</div>
                 </div>
@@ -218,7 +246,7 @@
                 <div class="gallery-item" data-category="personnalites">
                     <img src="images/archives/personnalites/anciens-eleves.jpg" alt="Rencontre d'anciens élèves" data-full="images/archives/personnalites/anciens-eleves.jpg">
                     <div class="gallery-caption">Rencontre d'anciens élèves (2010)</div>
-                </div>
+                </div>-->
             </div>
         </section>
 

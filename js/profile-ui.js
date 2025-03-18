@@ -69,7 +69,7 @@ function addProfileStyles() {
         .username-display {
             margin-right: 10px;
             font-weight: bold;
-            color: var(--dark-color);
+            color: var(--primary-color);
         }
         
         .profile-modal {
@@ -182,6 +182,7 @@ function addProfileStyles() {
         .icon-option {
             background-color: #eee;
             color: var(--dark-color);
+            background-color: var(--light-color);
         }
         
         .theme-options {

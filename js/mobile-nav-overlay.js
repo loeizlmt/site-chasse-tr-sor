@@ -22,12 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuBtn.addEventListener('click', function() {
         console.log('Mobile menu button clicked');
         mobileNavOverlay.classList.add('active');
+        mobileNavOverlay.style.display = "block"; 
+        mobileMenuBtn.style.display = "none"; 
     });
     
     // Close mobile menu when the close button is clicked
     mobileMenuClose.addEventListener('click', function() {
         console.log('Mobile menu close button clicked');
         mobileNavOverlay.classList.remove('active');
+        mobileNavOverlay.style.display = "none"; 
+        mobileMenuBtn.style.display = "block"; 
+ 
     });
     
     // Close mobile menu when a link is clicked

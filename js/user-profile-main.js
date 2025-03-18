@@ -7,7 +7,7 @@
 import { loadUserProfile, saveUserProfile } from './profile-data.js';
 import { updateAvatarDisplay } from './profile-avatar.js';
 import { applyTheme } from './profile-themes.js';
-import { syncWithGameState, recordVisitedPage, recordCompletedGame } from './profile-progress.js';
+import { syncWithGameState, recordCompletedGame } from './profile-progress.js';
 import { initProfileUI, updateProfileDisplay } from './profile-ui.js';
 import { initAccessibilityOptions, applyAccessibilitySettings } from './profile-accessibility.js';
 
@@ -30,8 +30,6 @@ function initUserProfile() {
     // Synchronize with existing game state
     syncWithGameState();
     
-    // Record current page visit
-    recordVisitedPage(window.location.pathname);
     
     console.log('User profile system initialized');
 }
@@ -43,7 +41,6 @@ document.addEventListener('DOMContentLoaded', initUserProfile);
 window.userProfileManager = {
     getUserProfile: () => import('./profile-data.js').then(module => module.getUserProfile()),
     recordCompletedGame,
-    recordVisitedPage,
     applyTheme,
     syncWithGameState,
     updateProfileDisplay,
