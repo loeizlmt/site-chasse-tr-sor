@@ -14,27 +14,27 @@
     },
     {
       "id": "science",
-      "name": "Laboratoires de Sciences",
-      "url": "https://www.example.com/visite-virtuelle/sciences",
-      "description": "Visitez les laboratoires de physique, chimie et SVT."
+      "name": "Espaces culturels",
+      "url": "https://pytel.fr/site/visite/Theme2/",
+      "description": "Visitez les espaces culturels du lycée."
     },
     {
       "id": "sports",
-      "name": "Installations Sportives",
-      "url": "https://www.example.com/visite-virtuelle/sport",
-      "description": "Découvrez le gymnase et les terrains de sport."
+      "name": "Espaces d'enseignement",
+      "url": "https://pytel.fr/site/visite/Theme3/",
+      "description": "Découvrez les salles de classe."
     },
     {
       "id": "cafeteria",
-      "name": "Cantine et Foyer",
-      "url": "https://www.example.com/visite-virtuelle/foyer",
-      "description": "Explorez les espaces de restauration et de détente."
+      "name": "Cabinet de curiosités",
+      "url": "https://pytel.fr/site/visite/Theme5/",
+      "description": "Découvrez des endroits surprenants dans le lycée."
     },
     {
       "id": "arts",
-      "name": "Salles d'Arts",
-      "url": "https://www.example.com/visite-virtuelle/arts",
-      "description": "Visitez les salles dédiées aux arts plastiques et à la musique."
+      "name": "Infrastructures sportives",
+      "url": "https://pytel.fr/site/visite/Theme6/",
+      "description": "Visitez les installations sportives du lycée."
     }
   ]
 }

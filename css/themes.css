@@ -25,6 +25,8 @@
     --section-border: none;
     --font-headings: var(--font-main);
     --animation-speed: 0.3s;
+
+    --logo-theme : url("../images/logos-themes/logo_par_defaut.webp");
 }
 
 /* Steampunk Theme */
@@ -49,6 +51,8 @@
     --section-border: none ; /*2px solid #b87333;*/
     --font-headings: 'Times New Roman', serif;
     --animation-speed: 0.5s;
+
+    --logo-theme : url("../images/logos-themes/SteamPunkJP.webp");
 }
 
 /* Medieval Theme */
@@ -73,6 +77,8 @@
     --section-border: none ; /*3px solid #8b0000;*/
     --font-headings: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     --animation-speed: 0.6s;
+
+    --logo-theme : url("../images/logos-themes/Medieval.webp");
 }
 
 /* Futuristic Theme */
@@ -91,12 +97,14 @@
     --card-border: 1px solid rgba(0, 191, 255, 0.5);
     --card-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
     --button-border-radius: 30px;
-    --header-bg: rgba(25, 25, 112, 0.9);
-    --footer-bg: rgba(25, 25, 112, 0.9);
+    --header-bg: rgba(25, 25, 112, 1);
+    --footer-bg: rgba(25, 25, 112, 1);
     --hero-overlay: url("../images/archives/extérieur/photojp.webp") ; /*linear-gradient(rgba(25, 25, 112, 0.7), rgba(25, 25, 112, 0.7));*/
     --section-border: none ; /*1px solid rgba(0, 191, 255, 0.5);*/
     --font-headings: 'Arial', sans-serif;
     --animation-speed: 0.2s;
+
+    --logo-theme : url("../images/logos-themes/futur.webp");
 }
 
 /* Theme-specific styles */
