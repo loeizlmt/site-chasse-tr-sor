@@ -51,9 +51,10 @@ header {
     gap: 1rem;
 }
 
-#logo-img {
+.logo-img {
     height: 50px;
-    width: auto;
+    width: 53px;
+    background-image : var(--logo-theme);
 }
 
 .logo h1 {
