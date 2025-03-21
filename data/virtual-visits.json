@@ -15,13 +15,13 @@
     {
       "id": "science",
       "name": "Espaces culturels",
-      "url": "hhttps://pytel.fr/site/visite/Theme2/",
+      "url": "https://pytel.fr/site/visite/Theme2/",
       "description": "Visitez les espaces culturels du lycée."
     },
     {
       "id": "sports",
       "name": "Espaces d'enseignement",
-      "url": "https://pytel.fr/site/visite/Theme3/",
+      "url": "https://pytel.fr/site/visite/Theme3/",  
       "description": "Découvrez les salles de classe."
     },
     {
